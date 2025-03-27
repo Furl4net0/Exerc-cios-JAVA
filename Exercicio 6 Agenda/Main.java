@@ -10,8 +10,9 @@ public class Main {
             System.out.println("Bem vindo a sua agenda!");
             System.out.println("1. Adicionar contato");
             System.out.println("2. Buscar contato");
-            System.out.println("3. Remover contato");
-            System.out.println("4. Sair");
+            System.out.println("3. Listar todos os contatos.");
+            System.out.println("4. Remover Contatos");
+            System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
             escolha = Leitor.nextInt();
             Leitor.nextLine();
@@ -24,15 +25,18 @@ public class Main {
                     agenda.buscarContato();
                     break;
                 case 3:
-                    agenda.removerContato();
+                    agenda.listarContatos();
                     break;
                 case 4:
+                    agenda.removerContato();
+                    break;
+                case 5:
                     System.out.println("Saindo...");
                     break;
                 default:
                     System.out.println("Opção inválida, tente novamente.");
             }
-        } while (escolha != 4);
+        } while (escolha != 5);
         Leitor.close();
     }
 }

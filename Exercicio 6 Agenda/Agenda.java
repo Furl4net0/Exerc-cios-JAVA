@@ -45,4 +45,16 @@ public class Agenda {
         }
         System.out.println("Contato não encontrado.");
     }
+
+    public void listarContatos() {
+        if (contatos.isEmpty()) {
+            System.out.println("Nenhum contato na agenda.");
+        } else {
+            System.out.println("\n===== LISTA DE CONTATOS =====");
+            for (Contato contato : contatos) {
+                contato.exibirContato();
+                System.out.println("----------------------------");
+            }
+        }
+    }
 }
