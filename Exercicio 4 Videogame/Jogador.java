@@ -1,4 +1,5 @@
-public class Jogador {
+import java.util.Scanner;
+class Jogador {
     private String nome;
     private float pontuacao;
     private int nivel;
@@ -9,23 +10,35 @@ public class Jogador {
         this.nivel = nivel;
     }
 
-    public void AumentarNivel() {
-            // Usuario escolhe personagem pelo indice do array
-            // e escolhe valor que só pode ser maior que o numero ja adicionado,
-            //pois nivel nao se perde
-
-    }
-    public void AumentarPontuacao() {
-        //Mesma coisa aqui
+    public String getNome() {
+        return nome;
     }
 
+    public void aumentarNivel(Scanner Leitor) {
+        System.out.print("Novo nível (deve ser maior que " + nivel + "): ");
+        int novoNivel = Leitor.nextInt();
+        if (novoNivel > nivel) {
+            this.nivel = novoNivel;
+            System.out.println("Nível atualizado com sucesso!");
+        } else {
+            System.out.println("O nível deve ser maior que o atual.");
+        }
+    }
 
-    public void exibirJogadores() {
+    public void aumentarPontuacao(Scanner Leitor) {
+        System.out.print("Nova pontuação (deve ser maior que " + pontuacao + "): ");
+        float novaPontuacao = Leitor.nextFloat();
+        if (novaPontuacao > pontuacao) {
+            this.pontuacao = novaPontuacao;
+            System.out.println("Pontuação atualizada com sucesso!");
+        } else {
+            System.out.println("A pontuação deve ser maior que a atual.");
+        }
+    }
+
+    public void exibirJogador() {
         System.out.println("Nome: " + nome);
         System.out.println("Pontuação: " + pontuacao);
-        System.out.println("Nivel: " + nivel);
+        System.out.println("Nível: " + nivel);
     }
-
-
-
 }
