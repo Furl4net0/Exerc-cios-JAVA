@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class MainBiblioteca {
     public static void main(String[] args) {
         Scanner Leitor = new Scanner(System.in);
         ArrayList<Livro> listaLivros = new ArrayList<>();

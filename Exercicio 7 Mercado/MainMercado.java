@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class MainMercado {
     private static ArrayList<Produto> Estoque = new ArrayList<>();
     private static Scanner Leitor = new Scanner(System.in);
 
