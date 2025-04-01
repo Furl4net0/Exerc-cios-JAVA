@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Pedido {
     private static int contador = 1;
     private int id;
@@ -12,16 +10,8 @@ public class Pedido {
         this.endereco = endereco;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public Pizza getPizza() {
         return pizza;
-    }
-
-    public String getEndereco() {
-        return endereco;
     }
 
     public String toString() {
